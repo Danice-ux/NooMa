@@ -1,0 +1,172 @@
+/* CSS/style.css */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 6vw, 5rem);
+}
+
+/* Typography & Buttons */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    margin-top: 0;
+    color: var(--color-ink);
+}
+
+.eyebrow {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-koper);
+    margin-bottom: 0.75rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--color-wijnrood);
+    background: var(--color-wijnrood);
+    color: var(--color-ivoor);
+    cursor: pointer;
+    transition: background 180ms ease, color 180ms ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-wijnrood);
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--color-wijnrood);
+}
+
+.btn--outline:hover {
+    background: var(--color-wijnrood);
+    color: var(--color-ivoor);
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgb(97 43 54 / 14%);
+}
+
+.hero__title {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.hero__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgb(41 38 34 / 80%);
+    margin-bottom: 2rem;
+}
+
+.hero__visual {
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, var(--color-oudroze), rgb(154 93 59 / 35%));
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Product Grid & Cards */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 3.5rem 0 2rem;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.25rem;
+    border: 1px solid rgb(97 43 54 / 25%);
+    background: transparent;
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: all 160ms ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    border-color: var(--color-wijnrood);
+    background: var(--color-wijnrood);
+    color: var(--color-ivoor);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 2.5rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(97 43 54 / 14%);
+    padding-bottom: 1.5rem;
+}
+
+.product-card__media {
+    aspect-ratio: 4 / 3;
+    background: rgb(216 182 176 / 28%);
+    margin-bottom: 1.25rem;
+    display: grid;
+    place-items: center;
+    color: var(--color-wijnrood);
+    font-family: var(--font-heading);
+    font-style: italic;
+}
+
+.product-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.product-card__title {
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.product-card__price {
+    font-weight: 600;
+    color: var(--color-koper);
+}
+
+.product-card__desc {
+    font-size: 0.92rem;
+    color: rgb(41 38 34 / 75%);
+    margin: 0 0 1.25rem;
+    flex-grow: 1;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | NooMaa</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="NooMaa - home">
+            <span class="brand__eyebrow">ATELIER</span>
+            <span class="brand__name">NooMaa</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Hoofdnavigatie">
+            <a class="main-nav__link" href="../index.html">Home</a>
+            <a class="main-nav__link main-nav__link--active" href="products.html" aria-current="page">Products</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="header-actions__link" href="#favorites" aria-label="Favorieten">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.8 8.7c0 4.1-8.8 10.1-8.8 10.1S3.2 12.8 3.2 8.7a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/>
+                </svg>
+            </a>
+            <a class="header-actions__link" href="#cart" aria-label="Winkelmandje">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.5L21 8H6"/>
+                    <circle cx="9.5" cy="19" r="1.2"/>
+                    <circle cx="17.5" cy="19" r="1.2"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+
+<main>
+    
+    
+    <span class="eyebrow">Collectie</span>
+    <h1>Onze Banken</h1>
+
+    <div class="filter-bar" role="group" aria-label="Filter op type bank">
+        <button class="filter-btn active" data-filter="all">Alle modellen</button>
+        <button class="filter-btn" data-filter="modulaire-bank">Modulaire banken</button>
+        <button class="filter-btn" data-filter="3-zits">3-zits</button>
+        <button class="filter-btn" data-filter="loveseat">Loveseats</button>
+    </div>
+
+    <div class="product-grid" id="catalog-grid">
+        <article class="product-card" data-category="3-zits">
+            <div class="product-card__media">Atelier Bouclé — 3-zits</div>
+            <div class="product-card__meta">
+                <h2 class="product-card__title">Model Serein</h2>
+                <span class="product-card__price">€ 2.450</span>
+            </div>
+            <p class="product-card__desc">240 cm breed &bull; Ivoor Bouclé &bull; Koudschuim vulling</p>
+            <a class="btn" href="purchase.html?model=serein">Bestellen</a>
+        </article>
+
+        <article class="product-card" data-category="modulaire-bank">
+            <div class="product-card__media">Wijnrood Linnen — Hoekbank</div>
+            <div class="product-card__meta">
+                <h2 class="product-card__title">Model Bordeaux</h2>
+                <span class="product-card__price">€ 3.190</span>
+            </div>
+            <p class="product-card__desc">310 x 210 cm &bull; Wijnrood Linnen &bull; Dons-topper</p>
+            <a class="btn" href="purchase.html?model=bordeaux">Bestellen</a>
+        </article>
+
+        <article class="product-card" data-category="loveseat">
+            <div class="product-card__media">Koper Velours — Loveseat</div>
+            <div class="product-card__meta">
+                <h2 class="product-card__title">Model Terra</h2>
+                <span class="product-card__price">€ 1.680</span>
+            </div>
+            <p class="product-card__desc">145 cm breed &bull; Koper Velours &bull; Massief eiken poten</p>
+            <a class="btn" href="purchase.html?model=terra">Bestellen</a>
+        </article>
+
+        <article class="product-card" data-category="modulaire-bank">
+            <div class="product-card__media">Oudroze Chenille — Elementenbank</div>
+            <div class="product-card__meta">
+                <h2 class="product-card__title">Model Nuage</h2>
+                <span class="product-card__price">€ 2.890</span>
+            </div>
+            <p class="product-card__desc">280 cm breed &bull; Oudroze Chenille &bull; 4 losse elementen</p>
+            <a class="btn" href="purchase.html?model=nuage">Bestellen</a>
+        </article>
+    </div>
+</main>
+</body>
+</html>

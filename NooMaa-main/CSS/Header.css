@@ -1,0 +1,148 @@
+:root {
+    color-scheme: light;
+    --color-wijnrood: #612b36;
+    --color-ivoor: #f7f3ed;
+    --color-ink: #292622;
+    --color-oudroze: #d8b6b0;
+    --color-koper: #9a5d3b;
+    --font-heading: "Source Serif 4", Georgia, serif;
+    --font-body: "Source Sans 3", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    background: var(--color-ivoor);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+}
+
+.site-header {
+    display: flex;
+    min-height: 96px;
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5.5rem);
+    padding: 1rem clamp(1.25rem, 6vw, 5rem);
+    border-bottom: 1px solid rgb(97 43 54 / 14%);
+    background: var(--color-ivoor);
+}
+
+.brand {
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-wijnrood);
+    line-height: 1;
+    text-decoration: none;
+}
+
+.brand__eyebrow {
+    margin-bottom: 0.15rem;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.48em;
+}
+
+.brand__name {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.main-nav__link {
+    position: relative;
+    padding: 0.5rem 0;
+    color: var(--color-ink);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+
+.main-nav__link:hover,
+.main-nav__link--active {
+    color: var(--color-wijnrood);
+}
+
+.main-nav__link--active::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--color-koper);
+    content: "";
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: auto;
+}
+
+.header-actions__link {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: var(--color-wijnrood);
+    transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.header-actions__link:hover {
+    border-color: var(--color-oudroze);
+    background: rgb(216 182 176 / 18%);
+}
+
+.header-actions__link svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6;
+}
+
+@media (max-width: 520px) {
+    .site-header {
+        min-height: 80px;
+        gap: 0.6rem;
+        padding-inline: 0.75rem;
+    }
+
+    .brand__name {
+        font-size: 1.45rem;
+    }
+
+    .main-nav {
+        gap: 0.55rem;
+    }
+
+    .main-nav__link {
+        font-size: 0.82rem;
+    }
+
+    .header-actions {
+        gap: 0;
+    }
+
+    .header-actions__link {
+        width: 34px;
+        height: 34px;
+    }
+}
